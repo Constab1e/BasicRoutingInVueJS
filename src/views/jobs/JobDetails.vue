@@ -5,11 +5,12 @@
     <p>Job id is {{ job.id }}</p>
     <h3>{{ job.details }}</h3>
   </div>
+  <div v-else><p>Loading...</p></div>
 </template>
 
 <script>
 export default {
-  props: ["id", "title", "details"],
+  props: ["id"],
   data() {
     return {
       job: null,
